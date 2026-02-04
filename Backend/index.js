@@ -1,4 +1,9 @@
 require('dotenv').config()
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:5173', // Your React app URL
+  credentials: true
+}));
 const express = require("express")
 const app = express()
 const cookieParser = require("cookie-parser")
